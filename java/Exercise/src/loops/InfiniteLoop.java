@@ -24,7 +24,7 @@ public class InfiniteLoop {
 				break;
 			}
 		}
-		
+		scanner.close();
 		
 		/*
 		final boolean isChecked = true;  // final keyword indicates that the value of this variable cannot be changed again and the value is final
