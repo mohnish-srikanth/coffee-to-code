@@ -2,6 +2,7 @@ package collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ConversionBetweenListArray {
@@ -37,7 +38,12 @@ public class ConversionBetweenListArray {
 		// array to list
 		String[] carsArray = new String[] {"Ferrari", "BMW", "Ford"};
 		
-		List<String> carsList = Arrays.asList(carsArray);
+		// List<String> carsList = Arrays.asList(carsArray); // this will give the output of the Array even if the array is modified later in the code
+		ArrayList<String> carsList = new ArrayList<String>();
+		for(String carString : carsArray) { // for each loop to convert Array to List
+			carsList.add(carString);
+		}
+		// Collections.addAll(carsList, carsArray); // this addAll function is used to add all elements of carsArray to carsList
 		
 		System.out.println("carsArray = " + Arrays.toString(carsArray));
 		System.out.println("carsList = " + carsList);
